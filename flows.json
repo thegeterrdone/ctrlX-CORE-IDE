@@ -1,0 +1,1441 @@
+[
+    {
+        "id": "2a4ba7d786456f64",
+        "type": "tab",
+        "label": "ctrlX I/O",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "811703a2e7c4d888",
+        "type": "tab",
+        "label": "IDE",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7abdeea62fe57d78",
+        "type": "ctrlx-config",
+        "name": "ctrlx CORE",
+        "hostname": "localhost",
+        "debug": false
+    },
+    {
+        "id": "4a2aac0737496e58",
+        "type": "ctrlx-config-subscription",
+        "device": "7abdeea62fe57d78",
+        "name": "ctrlX CORE",
+        "publishIntervalMs": ""
+    },
+    {
+        "id": "934ff470de78721a",
+        "type": "ui_tab",
+        "name": "ctrlX Core with IDE",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "becad417d54cfafe",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "7fa8740485242946",
+        "type": "ui_group",
+        "name": "Input Channel Status",
+        "tab": "934ff470de78721a",
+        "order": 1,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "072c354a012e9d07",
+        "type": "ui_group",
+        "name": "Output Channel Status",
+        "tab": "934ff470de78721a",
+        "order": 2,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d4b3ecd0c0b5384e",
+        "type": "ui_group",
+        "name": "Bus Coupler Status",
+        "tab": "934ff470de78721a",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7b877229.678964",
+        "type": "ctrlx-config",
+        "name": "localhost",
+        "hostname": "localhost",
+        "debug": false
+    },
+    {
+        "id": "d987b784514f2b3b",
+        "type": "ui_group",
+        "name": "Script management",
+        "tab": "934ff470de78721a",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "95c1416ff80097c5",
+        "type": "ui_group",
+        "name": "Group 5",
+        "tab": "934ff470de78721a",
+        "order": 5,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "5dfd886aae9de40f",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "2a4ba7d786456f64",
+        "subscription": "4a2aac0737496e58",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/input/data/XI110116/Channel_1.Value",
+        "name": "Channel 1 Input",
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "23d493de7c945967",
+                "ad0cce7292952934"
+            ]
+        ]
+    },
+    {
+        "id": "7646c12c80264ef0",
+        "type": "comment",
+        "z": "2a4ba7d786456f64",
+        "name": "Digital Inputs",
+        "info": "",
+        "x": 130,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "109fb424ee73e5b0",
+        "type": "comment",
+        "z": "2a4ba7d786456f64",
+        "name": "Digital Outputs",
+        "info": "",
+        "x": 140,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "4ae02d4e115cc5a5",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "2a4ba7d786456f64",
+        "subscription": "4a2aac0737496e58",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/input/data/XI110116/Channel_2.Value",
+        "name": "Channel 2 Input",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "1d91f932b1d91178"
+            ]
+        ]
+    },
+    {
+        "id": "c20f4eae6952eb50",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "2a4ba7d786456f64",
+        "subscription": "4a2aac0737496e58",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/input/data/XI110116/Channel_3.Value",
+        "name": "Channel 3 Input",
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "61f9cdb28c40c350"
+            ]
+        ]
+    },
+    {
+        "id": "23d493de7c945967",
+        "type": "ui_led",
+        "z": "2a4ba7d786456f64",
+        "order": 1,
+        "group": "7fa8740485242946",
+        "width": 0,
+        "height": 0,
+        "label": "Channel 1",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#00ff00",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 410,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "1d91f932b1d91178",
+        "type": "ui_led",
+        "z": "2a4ba7d786456f64",
+        "order": 2,
+        "group": "7fa8740485242946",
+        "width": 0,
+        "height": 0,
+        "label": "Channel 2",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#00ff00",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 410,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "61f9cdb28c40c350",
+        "type": "ui_led",
+        "z": "2a4ba7d786456f64",
+        "order": 3,
+        "group": "7fa8740485242946",
+        "width": 0,
+        "height": 0,
+        "label": "Channel 3",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#00ff00",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 410,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "86eeed5902444358",
+        "type": "ui_led",
+        "z": "2a4ba7d786456f64",
+        "order": 1,
+        "group": "072c354a012e9d07",
+        "width": 0,
+        "height": 0,
+        "label": "Channel 1",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#00ff00",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 410,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "2f21311a1150ad3a",
+        "type": "ui_led",
+        "z": "2a4ba7d786456f64",
+        "order": 2,
+        "group": "072c354a012e9d07",
+        "width": 0,
+        "height": 0,
+        "label": "Channel 2",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#00ff00",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 410,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "9e0431e92153732c",
+        "type": "ui_led",
+        "z": "2a4ba7d786456f64",
+        "order": 3,
+        "group": "072c354a012e9d07",
+        "width": 0,
+        "height": 0,
+        "label": "Channel 3",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#00ff00",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 410,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "1405896825554036",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "2a4ba7d786456f64",
+        "subscription": "4a2aac0737496e58",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/output/data/XI211116/Channel_1.Value",
+        "name": "Channel 1 Output",
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "86eeed5902444358"
+            ]
+        ]
+    },
+    {
+        "id": "f1916ee0a7196734",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "2a4ba7d786456f64",
+        "subscription": "4a2aac0737496e58",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/output/data/XI211116/Channel_2.Value",
+        "name": "Channel 1 Output",
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "2f21311a1150ad3a"
+            ]
+        ]
+    },
+    {
+        "id": "4248837774632fd9",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "2a4ba7d786456f64",
+        "subscription": "4a2aac0737496e58",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/output/data/XI211116/Channel_3.Value",
+        "name": "Channel 1 Output",
+        "x": 160,
+        "y": 460,
+        "wires": [
+            [
+                "9e0431e92153732c"
+            ]
+        ]
+    },
+    {
+        "id": "fcc5a1ff714c2b9a",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "2a4ba7d786456f64",
+        "subscription": "4a2aac0737496e58",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/input/data/XB_EC_12/UL_Supply_logic.UL_Voltage",
+        "name": "Logic Voltage",
+        "x": 610,
+        "y": 100,
+        "wires": [
+            [
+                "5aef9e71419af3bc"
+            ]
+        ]
+    },
+    {
+        "id": "5aef9e71419af3bc",
+        "type": "function",
+        "z": "2a4ba7d786456f64",
+        "name": "Scaling",
+        "func": "msg.payload = msg.payload/1000;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 100,
+        "wires": [
+            [
+                "bc3b1249aee047e4"
+            ]
+        ]
+    },
+    {
+        "id": "bc3b1249aee047e4",
+        "type": "ui_gauge",
+        "z": "2a4ba7d786456f64",
+        "d": true,
+        "name": "",
+        "group": "d4b3ecd0c0b5384e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Logic Voltage",
+        "label": "Volts",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#f5ef3d",
+            "#eebd53",
+            "#53fd70"
+        ],
+        "seg1": "12",
+        "seg2": "20",
+        "className": "",
+        "x": 1080,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "48f7e5132fd80ef9",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "2a4ba7d786456f64",
+        "subscription": "4a2aac0737496e58",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/input/data/XB_EC_12/UP_Supply_periphery.UP_Voltage",
+        "name": "Peripheral Voltage",
+        "x": 630,
+        "y": 160,
+        "wires": [
+            [
+                "11a6715665f0d53b"
+            ]
+        ]
+    },
+    {
+        "id": "11a6715665f0d53b",
+        "type": "function",
+        "z": "2a4ba7d786456f64",
+        "name": "Scaling",
+        "func": "msg.payload = msg.payload/1000;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 160,
+        "wires": [
+            [
+                "9d9c3e743d7d8385"
+            ]
+        ]
+    },
+    {
+        "id": "9d9c3e743d7d8385",
+        "type": "ui_gauge",
+        "z": "2a4ba7d786456f64",
+        "d": true,
+        "name": "",
+        "group": "d4b3ecd0c0b5384e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Peripheral Voltage",
+        "label": "Volts",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#f5ef3d",
+            "#eebd53",
+            "#53fd70"
+        ],
+        "seg1": "12",
+        "seg2": "20",
+        "className": "",
+        "x": 1070,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "1d1f93e218dbe015",
+        "type": "comment",
+        "z": "2a4ba7d786456f64",
+        "name": "Bus Coupler Status",
+        "info": "",
+        "x": 630,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2374943c128b4b84",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "2a4ba7d786456f64",
+        "subscription": "4a2aac0737496e58",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/input/data/XB_EC_12/UL_Supply_logic.UL_Current",
+        "name": "Logic Current",
+        "x": 610,
+        "y": 240,
+        "wires": [
+            [
+                "60562b306e24077d"
+            ]
+        ]
+    },
+    {
+        "id": "60562b306e24077d",
+        "type": "function",
+        "z": "2a4ba7d786456f64",
+        "name": "Scaling",
+        "func": "msg.topic = \"Logic current\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 240,
+        "wires": [
+            [
+                "0675324c2e4d7cb5"
+            ]
+        ]
+    },
+    {
+        "id": "0cf703350b716312",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "2a4ba7d786456f64",
+        "subscription": "4a2aac0737496e58",
+        "path": "fieldbuses/ethercat/master/instances/ethercatmaster/realtime_data/input/data/XB_EC_12/UP_Supply_periphery.UP_Current",
+        "name": "Peripheral Current",
+        "x": 630,
+        "y": 300,
+        "wires": [
+            [
+                "2f06b375ac61ecbb"
+            ]
+        ]
+    },
+    {
+        "id": "2f06b375ac61ecbb",
+        "type": "function",
+        "z": "2a4ba7d786456f64",
+        "name": "Scaling",
+        "func": "msg.topic = \"Peripheral current\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 300,
+        "wires": [
+            [
+                "0675324c2e4d7cb5"
+            ]
+        ]
+    },
+    {
+        "id": "0675324c2e4d7cb5",
+        "type": "ui_chart",
+        "z": "2a4ba7d786456f64",
+        "d": true,
+        "name": "",
+        "group": "d4b3ecd0c0b5384e",
+        "order": 3,
+        "width": "6",
+        "height": "6",
+        "label": "Current (in mA)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#f59f3d",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1080,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce5f70cd7fa74509",
+        "type": "inject",
+        "z": "2a4ba7d786456f64",
+        "name": "Refresh chart",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "x": 830,
+        "y": 360,
+        "wires": [
+            [
+                "0675324c2e4d7cb5"
+            ]
+        ]
+    },
+    {
+        "id": "ad0cce7292952934",
+        "type": "debug",
+        "z": "2a4ba7d786456f64",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "9408b45331d5a199",
+        "type": "ctrlx-datalayer-request",
+        "z": "811703a2e7c4d888",
+        "device": "7abdeea62fe57d78",
+        "method": "BROWSE",
+        "path": "script/instances",
+        "payloadFormat": "value_type",
+        "name": "",
+        "x": 500,
+        "y": 240,
+        "wires": [
+            [
+                "6046d7722d884269",
+                "9f56cf4f3059e6a6"
+            ]
+        ]
+    },
+    {
+        "id": "92a7079e6144280e",
+        "type": "function",
+        "z": "811703a2e7c4d888",
+        "name": "create instance",
+        "func": "var instance_name = msg.payload;\nvar newMsg = {};\nnewMsg.payload = {};\nnewMsg.payload.value = { \"name\": instance_name, \"language\": \"python\" };\nnewMsg.payload.type = \"object\";\nreturn newMsg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 80,
+        "wires": [
+            [
+                "e1e60feae1426b7e"
+            ]
+        ]
+    },
+    {
+        "id": "e1e60feae1426b7e",
+        "type": "ctrlx-datalayer-request",
+        "z": "811703a2e7c4d888",
+        "device": "7abdeea62fe57d78",
+        "method": "CREATE",
+        "path": "script/instances",
+        "payloadFormat": "value_type",
+        "name": "",
+        "x": 770,
+        "y": 80,
+        "wires": [
+            [
+                "9dea085eaed096b4"
+            ]
+        ]
+    },
+    {
+        "id": "9dea085eaed096b4",
+        "type": "debug",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "5899ed6719cfb094",
+        "type": "comment",
+        "z": "811703a2e7c4d888",
+        "name": "Step 1: Create an instance",
+        "info": "",
+        "x": 170,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b480bb6e616d64a0",
+        "type": "inject",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "9408b45331d5a199"
+            ]
+        ]
+    },
+    {
+        "id": "aa5b4080acadd160",
+        "type": "comment",
+        "z": "811703a2e7c4d888",
+        "name": "Step 2: Browse instances",
+        "info": "",
+        "x": 170,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9df4d3fd.3d9218",
+        "type": "function",
+        "z": "811703a2e7c4d888",
+        "name": "Script 1",
+        "func": "var instance = flow.get('instance') || \"\";\nvar newMsg = {};\n\nif (instance !== \"\") \n{\n    //script/instances/MyInstance2/cmd/file\n    newMsg.path = \"script/instances/\"+instance+\"/cmd/file\";\n    newMsg.payload = {\n        \"type\":\"object\",\n        \"value\":{\n            \"name\":\"activeConfiguration/script/\"+msg.payload+\".py\" //File Example1.py expected at root of the active configuration\n            }\n        }\n    return newMsg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 660,
+        "wires": [
+            [
+                "374d357d.cb126a"
+            ]
+        ]
+    },
+    {
+        "id": "374d357d.cb126a",
+        "type": "ctrlx-datalayer-request",
+        "z": "811703a2e7c4d888",
+        "device": "7abdeea62fe57d78",
+        "method": "CREATE",
+        "path": "",
+        "payloadFormat": "value_type",
+        "name": "Execute script",
+        "x": 1040,
+        "y": 660,
+        "wires": [
+            [
+                "4945aeb740048ebf",
+                "c035ef0cfee8e898"
+            ]
+        ]
+    },
+    {
+        "id": "c0963556.392e7",
+        "type": "comment",
+        "z": "811703a2e7c4d888",
+        "name": "Step 3: Execute a python file in an instance ",
+        "info": "",
+        "x": 220,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "9127b4de0f2b69b9",
+        "type": "comment",
+        "z": "811703a2e7c4d888",
+        "name": "Step 2: Read instance state",
+        "info": "",
+        "x": 180,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "074a3dd453d6ebbf",
+        "type": "ui_button",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "group": "d987b784514f2b3b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Browse instances",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "9408b45331d5a199"
+            ]
+        ]
+    },
+    {
+        "id": "6046d7722d884269",
+        "type": "ui_text",
+        "z": "811703a2e7c4d888",
+        "group": "d987b784514f2b3b",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Total number of instances",
+        "format": "{{msg.payload.value.length}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 990,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "9f56cf4f3059e6a6",
+        "type": "function",
+        "z": "811703a2e7c4d888",
+        "name": "join payload",
+        "func": "msg.payload = msg.payload.value.join('\\n');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 280,
+        "wires": [
+            [
+                "b3d6c30a6cc536e9",
+                "a9381796b1384986"
+            ]
+        ]
+    },
+    {
+        "id": "b3d6c30a6cc536e9",
+        "type": "ui_text",
+        "z": "811703a2e7c4d888",
+        "group": "d987b784514f2b3b",
+        "order": 4,
+        "width": "6",
+        "height": "2",
+        "name": "",
+        "label": "Available instances",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1010,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "bd01c7e13fd343f3",
+        "type": "ui_text_input",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "label": "Create new instance",
+        "tooltip": "",
+        "group": "d987b784514f2b3b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "msg",
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "92a7079e6144280e"
+            ]
+        ]
+    },
+    {
+        "id": "a9381796b1384986",
+        "type": "debug",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3d435b895de7b1fd",
+        "type": "ui_button",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "group": "d987b784514f2b3b",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Run Script 1",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Example1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 610,
+        "y": 660,
+        "wires": [
+            [
+                "9df4d3fd.3d9218"
+            ]
+        ]
+    },
+    {
+        "id": "2733738a3e4afea5",
+        "type": "ui_button",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "group": "d987b784514f2b3b",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Run Script 2 (Time based)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "orange",
+        "className": "",
+        "icon": "",
+        "payload": "Example2",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 570,
+        "y": 700,
+        "wires": [
+            [
+                "9df4d3fd.3d9218"
+            ]
+        ]
+    },
+    {
+        "id": "b060d7d95ed218c5",
+        "type": "ui_button",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "group": "d987b784514f2b3b",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Run Script 3 (Trigger based)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "Example3",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 560,
+        "y": 740,
+        "wires": [
+            [
+                "9df4d3fd.3d9218"
+            ]
+        ]
+    },
+    {
+        "id": "d1911dca847e44c7",
+        "type": "ui_text",
+        "z": "811703a2e7c4d888",
+        "group": "d987b784514f2b3b",
+        "order": 6,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Instance status",
+        "format": "{{msg.payload.value}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1020,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "c156e5bba389c524",
+        "type": "ctrlx-datalayer-request",
+        "z": "811703a2e7c4d888",
+        "device": "7abdeea62fe57d78",
+        "method": "READ",
+        "path": "",
+        "payloadFormat": "value_type",
+        "name": "",
+        "x": 690,
+        "y": 480,
+        "wires": [
+            [
+                "d1911dca847e44c7",
+                "eaf5a7df481f4196"
+            ]
+        ]
+    },
+    {
+        "id": "2d3d375c3d981326",
+        "type": "function",
+        "z": "811703a2e7c4d888",
+        "name": "msg.path",
+        "func": "var instance = flow.get('instance')||\"\";\nif (instance !== \"\")\n{\n    msg.path = \"script/instances/\"+instance+\"/state/opstate\";\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 480,
+        "wires": [
+            [
+                "c156e5bba389c524"
+            ]
+        ]
+    },
+    {
+        "id": "8fbfdff866f1cd42",
+        "type": "ui_text_input",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "label": "Read instance",
+        "tooltip": "",
+        "group": "d987b784514f2b3b",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "27b3b2673db7f840"
+            ]
+        ]
+    },
+    {
+        "id": "4945aeb740048ebf",
+        "type": "debug",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "27b3b2673db7f840",
+        "type": "function",
+        "z": "811703a2e7c4d888",
+        "name": "instance",
+        "func": "flow.set('instance',msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "850fdaaf1ed95cb0",
+        "type": "inject",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 480,
+        "wires": [
+            [
+                "2d3d375c3d981326"
+            ]
+        ]
+    },
+    {
+        "id": "1fddd0effc24cdeb",
+        "type": "ui_button",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "group": "d987b784514f2b3b",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Run Script 4 (PLC)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "blue",
+        "className": "",
+        "icon": "",
+        "payload": "Example4PLC",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 590,
+        "y": 780,
+        "wires": [
+            [
+                "9df4d3fd.3d9218"
+            ]
+        ]
+    },
+    {
+        "id": "a3f6ca5b20790fac",
+        "type": "inject",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 660,
+        "wires": [
+            [
+                "1dde510b4e340d82"
+            ]
+        ]
+    },
+    {
+        "id": "c035ef0cfee8e898",
+        "type": "link out",
+        "z": "811703a2e7c4d888",
+        "name": "ReadStatus",
+        "mode": "link",
+        "links": [
+            "4de97c15bb8baf18"
+        ],
+        "x": 1195,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "4de97c15bb8baf18",
+        "type": "link in",
+        "z": "811703a2e7c4d888",
+        "name": "",
+        "links": [
+            "c035ef0cfee8e898"
+        ],
+        "x": 315,
+        "y": 520,
+        "wires": [
+            [
+                "2d3d375c3d981326"
+            ]
+        ]
+    },
+    {
+        "id": "1dde510b4e340d82",
+        "type": "function",
+        "z": "811703a2e7c4d888",
+        "name": "instance status",
+        "func": "var instancestatus = flow.get('instancestatus')||\"\";\nif (instancestatus == \"BUSY\")\n{\n    msg.enabled = false;\n    return msg;\n}\n\nelse\n{\n    msg.enabled = true;\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 660,
+        "wires": [
+            [
+                "3d435b895de7b1fd",
+                "2733738a3e4afea5",
+                "b060d7d95ed218c5",
+                "1fddd0effc24cdeb"
+            ]
+        ]
+    },
+    {
+        "id": "eaf5a7df481f4196",
+        "type": "function",
+        "z": "811703a2e7c4d888",
+        "name": "instance status",
+        "func": "flow.set('instancestatus', msg.payload.value);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    }
+]
